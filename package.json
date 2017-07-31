@@ -1,6 +1,6 @@
 {
   "name": "for-object",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "a simple way to iterate through a plain js object",
   "main": "index.js",
   "files": [
