@@ -1,0 +1,54 @@
+{
+  "name": "for-object",
+  "version": "0.0.0",
+  "description": "a simple way to iterate through a plain js object",
+  "main": "index.js",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "index.js"
+  ],
+  "scripts": {
+    "coverage:open": "open coverage/index.html",
+    "coverage:check": "nyc check-coverage --statements 100 --functions 100 --lines 100 --branches 100",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "test": "standard --fix && nyc --reporter=html --reporter=text tape test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaquimserafim/for-object.git"
+  },
+  "keywords": [
+    "for",
+    "while",
+    "iterate",
+    "iterator",
+    "object",
+    "utils"
+  ],
+  "author": "@JoaquimSerafim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joaquimserafim/for-object/issues"
+  },
+  "homepage": "https://github.com/joaquimserafim/for-object#readme",
+  "devDependencies": {
+    "coveralls": "^2.13.1",
+    "nyc": "^11.0.3",
+    "pre-commit": "^1.2.2",
+    "standard": "^10.0.2",
+    "tape": "^4.7.0"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "nyc": {
+    "include": [
+      "index.js"
+    ]
+  },
+  "pre-commit": [
+    "test",
+    "coverage:check"
+  ]
+}
